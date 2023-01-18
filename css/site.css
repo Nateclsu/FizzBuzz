@@ -1,12 +1,22 @@
 :root {
     --primary-color: #3c5291;
-    --secondary-color: #d9d9d9;
+    --secondary-color: #08b2b8;
     --dark-color: #292929;
     --white-color: #d9d9d9;
 }
 
 body {
     color: var(--dark-color)
+}
+
+.logoFont {
+    font-family: video,serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.checkList {
+    color: var(--secondary-color)
 }
 
 nav {
