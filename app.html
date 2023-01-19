@@ -75,11 +75,44 @@
       </div>
     </nav>
      <!-- ==== Main Section ==== -->
-    <main class="flex-shrink-0">
-        <div class="container">
-
-        </div>
-    </main>
+     <main class="flex-shrink-0">
+      <div class="container">
+          <div class="row row-cols-1 row-cols-lg-2 mt-3">
+              <div class="col-lg-4 col border-end border-2">
+                  <h1>FIZZ BUZZ: A Coding Project</h1>
+                  <h4 class="lead">
+                      An application that displays results for the Fizz Buzz Coding problem.
+                  </h4>
+                  <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                  <p>Enter a starting value and a ending value.  Press the button and the values will appear.</p>
+              </div>
+              <div class="col-lg-8 col">
+                  <div>
+                      <h5>Enter Values</h5>
+                      <form class="row gy-2 gx-3">
+                          <div class="col">
+                              <input id="fizzValue" type="number" class="form-control" placeholder="Fizz Value" value=3 aria-label="Fizz Value">
+                          </div>
+                          <div class="col">
+                              <input id="buzzValue" type="number" class="form-control" placeholder="Buzz Value" value=5 aria-label="Buzz Value">
+                          </div>
+                          <div class="col-12 d-flex justify-content-end mt-3 mb-1">
+                              <button id="btnSubmit" type="button" class="btn btn-lg btn-darl myBtn".>Buzz</button>
+                          </div>
+                      </form>
+                      <h2 class="border-bottom border-2">Results</h2>
+                      <div class="table-responsive">
+                          <table class="table table-striped table-sm">
+                              <tbody id="results">
+                                  <!-- Results go here  -->
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
     <!-- ==== Footer Section ==== -->
     <footer class="footer mt-auto py-3 sticky-footer text-dark" id="myFooter">
         <div class="container-fluid">
@@ -128,11 +161,24 @@
         }
     </style>
 
+    <template id="fbTemplate">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
     <script src="js/site.js"></script>
+    <script>
+      document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
   </body>
 </html>
